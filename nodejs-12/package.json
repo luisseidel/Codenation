@@ -1,0 +1,23 @@
+{
+  "name": "nodejs-12",
+  "version": "1.0.0",
+  "description": "O arquivo `src/data/products.json` possui uma lista de **25 produtos** diferentes, distribuídos em **4 categorias**:",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest test/index.test.js",
+    "test:watch": "jest --watch"
+  },
+  "author": "luis.seidel",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^25.5.4",
+    "jest-junit": "^10.0.0"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "global": "^4.4.0",
+    "jest": "^25.5.4"
+  }
+}
