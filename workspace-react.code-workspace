@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"path": "C:\\Users\\luisg\\codenation\\react-11"
+		},
+		{
+			"path": "C:\\Users\\luisg\\codenation\\react-12"
+		},
+		{
+			"path": "C:\\Users\\luisg\\codenation\\nodejs-0"
+		},
+		{
+			"path": "C:\\Users\\luisg\\codenation\\nodejs-12"
+		},
+		{
+			"path": "C:\\Users\\luisg\\codenation\\react-13"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "react-12",
+		"git.ignoreLimitWarning": true
+	}
+}
