@@ -1,8 +1,17 @@
 import React from "react";
 import "./InputText.css";
 
-export function InputText(props) {
-    return (
-        <input type="text" className="inputText" placeholder={props.placeholder} />
-    );
+class InputText extends React.Component {
+    constructor(props){
+        super(props);
+        this.props = props;
+    }
+
+    render() {
+        return(
+            <input type="text" className="inputText" placeholder={this.props.placeholder} />
+        );
+    }
 }
+
+export default InputText;

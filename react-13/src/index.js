@@ -7,7 +7,7 @@ import 'font-awesome/css/font-awesome.min.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App className="app"/>
   </React.StrictMode>,
   document.getElementById('root')
 );

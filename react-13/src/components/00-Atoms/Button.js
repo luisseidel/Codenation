@@ -2,11 +2,31 @@ import React from "react";
 import "./Button.css";
 
 
-export function Button(props) {
-    return (
-        <button className="button" >
-            { props.name }
-            <i className={ props.icon }></i>
-        </button>
-    );
+class Button extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.props = props;
+        this.state = {
+            isButtonClicked: false,
+        }
+    }
+
+    render() {
+        return(
+            <button className="button" onClick={() => this.setState({ isButtonClicked: !this.state.isButtonClicked })}>
+                
+                { this.props.textAction }
+                
+                {
+                    this.state.isButtonClicked
+                    ? <i className="fa fa-sort-desc" />
+                    : <i className="fa fa-sort-asc" />
+                }
+
+            </button>
+        );
+    }
 }
+
+export default Button;

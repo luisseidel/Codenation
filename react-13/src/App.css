@@ -1,3 +1,15 @@
-.App {
-  background-color: #eee;
+.app {
+  background-color: azure;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.center-elements {
+  display: flex;
+  justify-content: center;
 }

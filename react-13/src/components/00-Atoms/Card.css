@@ -1,0 +1,29 @@
+.card {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 0px 3px gray;
+}
+
+.card-title {
+    font-weight: bolder;
+}
+
+.card-image {
+    max-width: 5%;
+    border-radius: 50%;
+    border: 2px solid lightblue;
+}
+
+.card-body {
+    width: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+    vertical-align: middle;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.card-text {
+    margin: 1%;
+}

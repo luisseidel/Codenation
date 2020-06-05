@@ -1,18 +1,30 @@
 import React from "react";
-import Card from "../01-Molecules/Card";
+import {Card, CardImage, CardText, CardBody} from '../00-Atoms/Card'; 
+import { FormGroup } from '../00-Atoms/FormGroup'
 import './Contato.css';
 
 
 class Contato extends React.Component {
     constructor(props) {
         super(props);
+        this.props = props;
     }
 
     render() {
         return(
-            <div className="contato">
-                <Card />
-            </div>
+            <FormGroup>
+                <Card>
+                    <CardImage image={this.props.contatoImage} alt={this.props.contatoAltImage}/>
+                    <CardBody>
+                        <CardText contatoInfo={this.props.contatoName}/>
+                        <CardText contatoInfo={this.props.contatoFone}/>
+                        <CardText contatoInfo={this.props.contatoPais}/>
+                        <CardText contatoInfo={this.props.contatoDataAdmissao}/>
+                        <CardText contatoInfo={this.props.contatoEmpresa}/>
+                        <CardText contatoInfo={this.props.contatoDepartamento}/>
+                    </CardBody>
+                </Card>
+            </FormGroup>
         );
     }
 }
