@@ -28,6 +28,6 @@ export function CardText(props) {
 
 export function Card(props) {
     return (
-        <div className="card">{props.children}</div>
+        <div key={props.id} className="card">{props.children}</div>
     );
 }

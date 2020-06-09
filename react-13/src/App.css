@@ -13,3 +13,29 @@
   display: flex;
   justify-content: center;
 }
+
+.filterByName {
+  font-size: 20px;
+  color: darkslategray;
+  width: 30%;
+  min-width: 10%;
+  max-width: 40%;
+  min-height: 2em;
+  max-height: 2.5em;
+  background-color: #fef;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.sortButton {
+  min-width: 120px;
+  width: 10%;
+  height: 3em;
+  background-color: #8AF;
+  border: 1px solid black;
+  color: white;
+  font-weight: bolder;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

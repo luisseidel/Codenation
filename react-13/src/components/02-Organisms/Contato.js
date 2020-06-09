@@ -13,7 +13,7 @@ class Contato extends React.Component {
     render() {
         return(
             <FormGroup>
-                <Card>
+                <Card key={this.props.id}>
                     <CardImage image={this.props.contatoImage} alt={this.props.contatoAltImage}/>
                     <CardBody>
                         <CardText contatoInfo={this.props.contatoName}/>

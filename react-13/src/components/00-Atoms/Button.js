@@ -6,7 +6,6 @@ class Button extends React.Component {
 
     constructor(props) {
         super(props);
-        this.props = props;
         this.state = {
             isButtonClicked: false,
         }
@@ -14,7 +13,8 @@ class Button extends React.Component {
 
     render() {
         return(
-            <button className="button" onClick={() => this.setState({ isButtonClicked: !this.state.isButtonClicked })}>
+            <button className="button" 
+                    onClick={() => this.setState({ isButtonClicked: !this.state.isButtonClicked })}>
                 
                 { this.props.textAction }
                 
