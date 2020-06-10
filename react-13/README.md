@@ -1,68 +1,43 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# SPA: App de Contatos - PARTE 1
 
-## Available Scripts
+## Objetivo:
+O desafio é desenvolver um *SPA (Single Page Application)* de uma lista de contatos em **React** com as seguintes funcionalidades:
 
-In the project directory, you can run:
+-  Consumir os dados de contato através de uma API Rest, usando a *Fetch API* do Javascript.
+-  Busca de um contato aplicando filtro em **tempo real**.
+-  Aplicar filtros de ordenação por *Nome*, *País*, *Empresa*, *Departamento* e *Data de Admissão*.
 
-### `yarn start`
+### API de Contatos:
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+GET: *https://5e82ac6c78337f00160ae496.mockapi.io/api/v1/contacts*
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### Requisitos - Parte 1:
 
-### `yarn test`
+- Modularize os componentes na pasta components.
+- Atualize os arquivos de componentes carregando corretamente seus estilos e suas marcações JSX.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+### Iniciar o projeto:
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Instale as dependências do projeto com o comando *yarn install* ou *npm install*.
+- Inicie o projeto com comando *yarn start* ou *npm start* / *npm run start*.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+**Preview:**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+[Contacts SPA](https://vimeo.com/414861574/cb0d443103)
 
-### `yarn eject`
+## Tópicos:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Neste desafio você vai praticar os seus conhecimentos em:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **React**
+- **Modularização**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Requisitos:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+* **[Node v13.8.0](https://nodejs.org/en/)** - ou superior, instalado em seu computador.
+* **[Create React App](https://github.com/facebook/create-react-app)**
 
-## Learn More
+## Screenshot de Referência
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+![](https://codenation-challenges.s3-us-west-1.amazonaws.com/react-14/screenshot.png)

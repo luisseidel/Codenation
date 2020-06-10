@@ -1,28 +1,16 @@
 import React from 'react';
-import './App.css';
-import Contato from './components/02-Organisms/Contato';
-import { TableHeaders } from './components/02-Organisms/TableHeaders'
-import api from './Api';
 
-class App extends React.Component {
+class Filters extends React.Component {
 
   state = {
     contatos: [],
     input: '',
-    isSorted: false,
-  }
-
-  async componentDidMount() {
-    const response = await api.get();
-    this.setState({
-      contatos: response.data,
-      contatosFiltrados: response.data
-    });
+    isSorted: false
   }
 
   onChangeHandler(e) {
     this.setState({
-      input: e.target.value,
+      input: e.target.value
     })
   }
 
@@ -127,48 +115,43 @@ class App extends React.Component {
     })
   }
 
-  render() {
+	render() {
+		return (
+		
+		    <div className="container">
+          <section className="filters">
+            <div className="filters__search">
+              <input type="text" className="filters__search__input" placeholder="Pesquisar" onChange={this.onChangeHandler.bind(this)} />
 
-    const list = this.state.contatos
-                 .filter(contato => this.state.input === '' || contato.name.includes(this.state.input))
-                 .map((contato) => <Contato key={contato.id}
-                              contatoName={contato.name} 
-                              contatoFone={contato.phone}
-                              contatoImage={contato.avatar}
-                              contatoPais={contato.country}
-                              contatoDataAdmissao={contato.admissionDate}
-                              contatoEmpresa={contato.company}
-                              contatoDepartamento={contato.department}/> );
+              <button className="filters__search__icon">
+                <i className="fa fa-search"/>
+              </button>
+            </div>
 
-    return (
-      <div>
-        <div className="center-elements">
-          <div className="search-bar">
-            <input type="text" className="filterByName" placeholder="Filter by name..." onChange={this.onChangeHandler.bind(this)}/>
-            <button onClick={this.sortByName}       className="sortButton">Nome</button>
-            <button onClick={this.sortByPhone}      className="sortButton">Telefone</button>
-            <button onClick={this.sortByCountry}    className="sortButton">Pais</button>
-            <button onClick={this.sortByDate}       className="sortButton">Data</button>
-            <button onClick={this.sortByCompany}    className="sortButton">Empresa</button>
-            <button onClick={this.sortByDepartment} className="sortButton">Departamento</button>
-          </div>
-        </div> 
-        <div>
-          <TableHeaders tituloNome="Nome"
-                        tituloTelefone="Telefone"
-                        tituloPais="País"
-                        tituloDataAdmissao="Data Admissão"
-                        tituloEmpresa="Empresa"
-                        tituloDepartamento="Departamento"
-                        />
+            <button className="filters__item is-selected" onClick={this.sortByName}>
+              Nome <i className="fas fa-sort-down" />
+            </button>
+
+            <button className="filters__item" onClick={this.sortByCountry}>
+              País <i className="fas fa-sort-down" />
+            </button>
+
+            <button className="filters__item" onClick={this.sortByCompany}>
+              Empresa <i className="fas fa-sort-down" />
+            </button>
+
+            <button className="filters__item" onClick={this.sortByDepartment}>
+              Departamento <i className="fas fa-sort-down" />
+            </button>
+
+            <button className="filters__item" onClick={this.sortByDate}>
+              Data de admissão <i className="fas fa-sort-down" />
+            </button>
+          </section>
         </div>
-        <div>
-          {list}  
-        </div>
-      </div>
-    );
-  }
-  
+
+		);
+	}
 }
 
-export default App;
+export default Filters;
