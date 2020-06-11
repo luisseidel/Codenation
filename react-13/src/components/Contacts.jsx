@@ -1,29 +1,14 @@
 import React from "react";
-import api from '../Api';
 import Contact from './Contact';
 
 class Contacts extends React.Component {
 
-  state = {
-    contatos: [],
-    input: '',
-    isSorted: false
-  }
-
-  async componentDidMount() {
-    const response = await api.get();
-    this.setState({
-      contatos: response.data,
-      contatosFiltrados: response.data
-    })
-  } 
-  
 	render() {
 
-    const list = this.state.contatos;
+    const list = this.props.contactList;
 
 		return (
-		    <div className="container">
+		    <div data-testid="contacts" className="container">
           <section className="contacts">
             <article className="contact">
               <span className="contact__avatar" />
@@ -35,15 +20,17 @@ class Contacts extends React.Component {
               <span className="contact__data">Departamento</span>
             </article>
 
-            {list.map((contato) => <Contact key={contato.id}
+            {
+              (list != null && list ? list.map((contato) => <Contact    key={contato.id}
                                                contatoName={contato.name} 
                                                contatoFone={contato.phone}
                                                contatoImage={contato.avatar}
                                                contatoPais={contato.country}
                                                contatoDataAdmissao={contato.admissionDate}
                                                contatoEmpresa={contato.company}
-                                               contatoDepartamento={contato.department}/> )
+                                               contatoDepartamento={contato.department}/> ) : [])
             }
+
           </section>
         </div>
 		);
