@@ -17,6 +17,15 @@
 		},
 		{
 			"path": "react-14"
+		},
+		{
+			"path": "react-15"
+		},
+		{
+			"path": "react-16"
+		},
+		{
+			"path": "react-17"
 		}
 	],
 	"settings": {
